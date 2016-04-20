@@ -1,4 +1,3 @@
-
 'use strict';
 
 (function() {
@@ -17,7 +16,7 @@
 		});
 		
 		function editProduct()	{
-			console.log('editing product');
+			console.log('editing the current product');
 			Products.update(vm.product);
 			$state.go('products');
 		}
