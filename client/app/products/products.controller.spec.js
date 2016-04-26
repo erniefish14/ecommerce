@@ -2,20 +2,20 @@
 
 describe('Component: ProductsComponent', function () {
 
-  // load the controller's module
-  beforeEach(module('meanshopApp'));
+    // load the controller's module
+    beforeEach(module('meanshopApp'));
 
-  var ProductsComponent, scope;
+    var ProductsComponent, scope;
 
-  // Initialize the controller and a mock scope
-  beforeEach(inject(function ($componentController, $rootScope) {
-    scope = $rootScope.$new();
-    ProductsComponent = $componentController('ProductsComponent', {
-      $scope: scope
+    // Initialize the controller and a mock scope
+    beforeEach(inject(function ($controller, $rootScope) {
+        scope = $rootScope.$new();
+        ProductsComponent = $controller('ProductsController', {
+            $scope: scope
+        });
+    }));
+
+    it('should ...', function () {
+        expect(1).to.equal(1);
     });
-  }));
-
-  it('should ...', function () {
-    expect(1).to.equal(1);
-  });
 });
